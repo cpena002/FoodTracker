@@ -24,26 +24,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="j8C-Iz-3WC">
-                                <rect key="frame" x="16" y="40" width="343" height="96.5"/>
+                                <rect key="frame" x="16" y="40" width="343" height="97"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-aj-EuM">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="97"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ago-ck-PQb">
-                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZW7-1t-2FY">
-                                                <rect key="frame" x="0.0" y="28.5" width="343" height="30"/>
+                                                <rect key="frame" x="0.0" y="29" width="343" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKH-71-fBe">
-                                                <rect key="frame" x="0.0" y="66.5" width="151" height="30"/>
+                                                <rect key="frame" x="0.0" y="67" width="151" height="30"/>
                                                 <state key="normal" title="Set Default Label Text"/>
+                                                <connections>
+                                                    <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZI-L3-Xy2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -60,9 +63,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="j8C-Iz-3WC" secondAttribute="trailing" id="phk-cX-VJU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="Ago-ck-PQb" id="nSx-qk-57H"/>
+                        <outlet property="nameTextField" destination="ZW7-1t-2FY" id="Q5e-eq-IzL"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-326" y="71"/>
+            <point key="canvasLocation" x="-903" y="-324"/>
         </scene>
     </scenes>
 </document>
